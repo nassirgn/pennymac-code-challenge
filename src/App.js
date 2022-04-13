@@ -1,19 +1,24 @@
-import { ThemeProvider } from '@mui/material';
-import GlobalStyles from './components/GlobalStyles';
-import Layouts from './Layouts';
-import Home from './pages/Home';
+import { ThemeProvider } from "@mui/material";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-import theme  from './theme'
+import GlobalStyles from "./components/GlobalStyles";
+import Layouts from "./Layouts";
+import Home from "./pages/Home";
 
+import theme from "./theme";
 
 function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Layouts>
-        <Home />
-      </Layouts>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Layouts>
+          <Home />
+        </Layouts>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 

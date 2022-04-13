@@ -1,10 +1,12 @@
+import { ThemeProvider } from '@mui/material';
+import theme  from './theme'
 
 
 function App() {
   return (
-    <div>
-      Hello World
-    </div>
+    <ThemeProvider theme={theme}>
+      <span style={{color: theme.palette.text.primary}}>Hello World</span>
+    </ThemeProvider>
   );
 }
 

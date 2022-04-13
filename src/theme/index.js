@@ -13,7 +13,10 @@ const theme = createTheme({
       text: {
         primary: colors.blueGrey[900],
         secondary: colors.blueGrey[600]
-      }
+      },
+      background: {
+        paper: colors.common.white,
+      },
     },
     typography: {
       h4: {

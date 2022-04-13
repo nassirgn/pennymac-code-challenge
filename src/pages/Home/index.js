@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import {randomColor} from 'randomcolor'
 
 import useGetRandomQuote from "../../hooks/useGetRandomQuote";
 
@@ -38,8 +39,7 @@ const Home = () => {
                   whiteSpace: "normal",
                   m: 4,
                   p: 1,
-                  bgcolor: "grey.100",
-                  color: "grey.800",
+                  bgcolor: randomColor({luminosity: 'dark', count: 27}),
                   border: "1px solid",
                   borderColor: "grey.300",
                   borderRadius: 2,
@@ -47,10 +47,10 @@ const Home = () => {
                   fontWeight: "700",
                 }}
               >
-                <Typography variant="h4" sx={{ fontStyle: "italic" }}>
+                <Typography variant="h4" sx={{ fontStyle: "italic", color: theme => theme.palette.primary.contrastText }}>
                   {`"${quote.data.data.quote}"`}
                 </Typography>
-                <Typography variant="h4" sx={{ textAlign: "center", py: 2 }}>
+                <Typography variant="h4" sx={{ textAlign: "center", py: 2, color: 'white' }}>
                   {`Author: "${quote.data.data.author}"`}
                 </Typography>
               </Box>

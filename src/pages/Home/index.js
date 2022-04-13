@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import {randomColor} from 'randomcolor'
 
 import useGetRandomQuote from "../../hooks/useGetRandomQuote";
+import theme from "../../theme";
 
 const Home = () => {
   const quote = useGetRandomQuote();

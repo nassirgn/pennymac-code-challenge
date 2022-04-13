@@ -7,7 +7,7 @@ const TopBar = () => {
       <AppBar position="static" >
         <Toolbar sx={{ }}>
             <Logo />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
             Quotes App
           </Typography>
         </Toolbar>

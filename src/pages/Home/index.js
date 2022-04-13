@@ -40,11 +40,11 @@ const Home = () => {
               fontWeight: "700",
             }}
           >
-            <Typography variant="h4">
+            <Typography variant="h4" sx={{fontStyle: 'italic'}}>
             {`"${quote.data.data.quote}"`}
 
             </Typography>
-            <Typography variant="h4" sx={{textAlign: 'center'}}>
+            <Typography variant="h4" sx={{textAlign: 'center', py: 2}}>
               {`Author: "${quote.data.data.author}"`}
             </Typography>
           </Box>

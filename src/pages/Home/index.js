@@ -4,12 +4,17 @@ import useGetRandomQuote from '../../hooks/useGetRandomQuote'
 const Home = () => {
   const quote = useGetRandomQuote()
 
-  if(quote){
-    console.log(quote);
-    return null
-  }
+  
   return (
-    <div>Home</div>
+    <React.Fragment>
+    {quote.isLoading? (
+      <span>loading...</span>
+    ):quote.isError? (
+      <span>Ops something happened...</span>
+    ):(
+      <pre>{JSON.stringify(quote.data.data)}</pre>
+    )}
+    </React.Fragment>
   )
 }
 
